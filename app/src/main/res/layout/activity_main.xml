@@ -7,12 +7,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity"
-    android:layout_margin="8dp">
+    android:layout_marginTop="15dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_margin="8dp">
 
             <EditText
                 android:id="@+id/nameET"
@@ -20,13 +21,13 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:hint="@string/hintNameET"
-                tools:ignore="Autofill,TextFields" />
+                tools:ignore="Autofill,TextFields"/>
 
             <EditText
                 android:id="@+id/phoneET"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="2"
+                android:layout_weight="1"
                 android:hint="@string/hintPhoneET"
                 tools:ignore="Autofill,TextFields" />
 
@@ -38,18 +39,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/textAddressET"
-        tools:ignore="Autofill,TextFields" />
+        tools:ignore="Autofill,TextFields"
+        android:layout_margin="8dp"/>
 
     <Button
         android:id="@+id/saveBTN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/textSaveBTN"
-        android:onClick="saveData"/>
+        android:onClick="saveData"
+        android:layout_margin="8dp"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerRV"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/list_item"/>
+        tools:listitem="@layout/list_item"
+        android:layout_margin="8dp"/>
+
 </LinearLayout>

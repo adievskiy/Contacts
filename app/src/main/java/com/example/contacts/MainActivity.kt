@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -64,23 +63,34 @@ class MainActivity : AppCompatActivity(), ContactsAdapter.ContactClickListener {
         val contactPhone = phoneET.text.toString()
         val contactDate = formatDate(Date().time)
         val contactAddress = addressET.text.toString()
-            if (contactName.isNotEmpty() && contactPhone.isNotEmpty() && contactAddress.isNotEmpty()) {
-                if (isValidPhoneNumber(contactPhone)) {
-                    viewModel.addContact(Contacts(contactName, contactPhone, contactDate, contactAddress))
-                    nameET.text.clear()
-                    phoneET.text.clear()
-                    addressET.text.clear()
-                } else Toast.makeText(this, "Введите корректный номер телефона", Toast.LENGTH_LONG)
-                    .show()
+        if (contactName.isNotEmpty() && contactPhone.isNotEmpty() && contactAddress.isNotEmpty()) {
+            if (isValidPhoneNumber(contactPhone)) {
+                viewModel.addContact(
+                    Contacts(
+                        contactName,
+                        contactPhone,
+                        contactDate,
+                        contactAddress
+                    )
+                )
+                /*clearEditable()*/
+            } else Toast.makeText(this, "Введите корректный номер телефона", Toast.LENGTH_LONG)
+                .show()
 
-            } else {
-                Toast.makeText(this, "Заполните все поля", Toast.LENGTH_LONG).show()
-            }
+        } else {
+            Toast.makeText(this, "Заполните все поля", Toast.LENGTH_LONG).show()
+        }
+    }
+
+    private fun clearEditable() {
+        nameET.text.clear()
+        phoneET.text.clear()
+        addressET.text.clear()
     }
 
     @SuppressLint("SimpleDateFormat")
     private fun formatDate(time: Long): String {
-        val dateFormat = SimpleDateFormat("EE, MMM D")
+        val dateFormat = SimpleDateFormat("EE, MMM dd")
         dateFormat.timeZone = TimeZone.getTimeZone("GMT +04")
         return dateFormat.format(Date(time))
     }
