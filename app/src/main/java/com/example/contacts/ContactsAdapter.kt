@@ -26,12 +26,14 @@ class ContactsAdapter(private val context: Context, private val listener: Contac
         private val nameTV: TextView = itemView.findViewById(R.id.nameTV)
         private val phoneTV: TextView = itemView.findViewById(R.id.phoneTV)
         private val dateTV: TextView = itemView.findViewById(R.id.dateTV)
+        private val addressTV: TextView = itemView.findViewById(R.id.addressTV)
         val deleteIV: ImageView = itemView.findViewById(R.id.deleteIV)
 
         fun bind(contacts: Contacts) {
             nameTV.text = contacts.name
             phoneTV.text = contacts.phone
             dateTV.text = contacts.date
+            addressTV.text = contacts.address
         }
     }
 

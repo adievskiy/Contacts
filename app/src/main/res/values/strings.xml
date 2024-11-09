@@ -6,4 +6,6 @@
     <string name="textNameTV">Имя</string>
     <string name="textPhoneTV">Телефон</string>
     <string name="textDateTV">Дата</string>
+    <string name="textAddressET">Адрес</string>
+    <string name="textAddressTV">Адрес</string>
 </resources>

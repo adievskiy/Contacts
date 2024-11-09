@@ -26,12 +26,19 @@
                 android:id="@+id/phoneET"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:hint="@string/hintPhoneET"
                 tools:ignore="Autofill,TextFields" />
 
 
         </LinearLayout>
+
+    <EditText
+        android:id="@+id/addressET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/textAddressET"
+        tools:ignore="Autofill,TextFields" />
 
     <Button
         android:id="@+id/saveBTN"

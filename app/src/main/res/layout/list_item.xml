@@ -20,11 +20,11 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/phoneTV"
+            android:id="@+id/addressTV"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/textPhoneTV"
+            android:text="@string/textAddressTV"
             android:textSize="18sp" />
 
         <ImageView
@@ -43,9 +43,18 @@
         android:orientation="horizontal">
 
         <TextView
+            android:id="@+id/phoneTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/textPhoneTV"
+            android:layout_weight="1"
+            android:textSize="16sp" />
+
+        <TextView
             android:id="@+id/dateTV"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="3"
             android:text="@string/textDateTV" />
 
 
