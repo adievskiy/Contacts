@@ -73,7 +73,7 @@ class MainActivity : AppCompatActivity(), ContactsAdapter.ContactClickListener {
                         contactAddress
                     )
                 )
-                /*clearEditable()*/
+                clearEditable()
             } else Toast.makeText(this, "Введите корректный номер телефона", Toast.LENGTH_LONG)
                 .show()
 
