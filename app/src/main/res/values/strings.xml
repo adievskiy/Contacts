@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Contacts</string>
+    <string name="hintNameET">Имя</string>
+    <string name="hintPhoneET">Телефон</string>
+    <string name="textSaveBTN">Сохранить</string>
+    <string name="textNameTV">Имя</string>
+    <string name="textPhoneTV">Телефон</string>
+    <string name="textDateTV">Дата</string>
+</resources>
